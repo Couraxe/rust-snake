@@ -32,9 +32,9 @@ fn main() {
         }
 
         // Draw all of them
-        window.draw_2d(&event, |c, g| {
-            clear(BACK_COLOR, g);
-            game.draw(&c, g);
+        window.draw_2d(&event, |ctx, g2d, _device| {
+            clear(BACK_COLOR, g2d);
+            game.draw(&ctx, g2d);
         });
 
         // Update the state of the game
